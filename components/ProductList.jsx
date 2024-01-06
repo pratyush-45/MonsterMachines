@@ -1,6 +1,8 @@
 import styles from "../styles/ProductList.module.css";
 import ProductCard from "./ProductCard";
 import HelmetCard from "./HelmetCard";
+import HornCard from "./HornCard";
+import LedCard from "./LedCard";
 
 const ProductList = ({ productList }) => {
   return (
@@ -20,6 +22,8 @@ const ProductList = ({ productList }) => {
       </p>
       <div className={styles.wrapper}>
         <HelmetCard />
+        <HornCard />
+        <LedCard />
         {productList.map((product) => (
           <ProductCard key={product._id} product={product} />
         ))}

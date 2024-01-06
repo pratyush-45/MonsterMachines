@@ -3,9 +3,9 @@ import Image from "next/image";
 import { useState } from "react";
 import styles from "../../styles/Admin.module.css";
 
-const Index = ({ products }) => {
+const Index = ({ orders, products }) => {
   const [productList, setProductList] = useState(products);
-  //const [orderList, setOrderList] = useState(orders);
+  const [orderList, setOrderList] = useState(orders);
   const status = ["preparing", "on the way", "delivered"];
 
   const handleDelete = async (id) => {
@@ -93,7 +93,7 @@ const Index = ({ products }) => {
               <th>Action</th>
             </tr>
           </tbody>
-          {/* {orderList.map((order) => (
+          {orderList.map((order) => (
             <tbody key={order._id}>
               <tr className={styles.trTitle}>
                 <td>{order._id.slice(0, 5)}...</td>
@@ -110,7 +110,7 @@ const Index = ({ products }) => {
                 </td>
               </tr>
             </tbody>
-          ))} */}
+          ))}
         </table>
       </div>
     </div>
@@ -130,10 +130,11 @@ export const getServerSideProps = async (ctx) => {
   }
 
   const productRes = await axios.get("http://localhost:3000/api/products");
-  //const orderRes = await axios.get("http://localhost:3000/api/orders");
+  const orderRes = await axios.get("http://localhost:3000/api/orders");
 
   return {
     props: {
+      orders: orderRes.data,
       products: productRes.data,
     },
   };

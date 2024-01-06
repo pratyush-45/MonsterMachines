@@ -14,7 +14,7 @@ const Navbar = () => {
         </div>
         <div className={styles.texts}>
           <div className={styles.text}>CONTACT US NOW!</div>
-          <div className={styles.text}>012 345 678</div>
+          <div className={styles.text}>7805078344</div>
         </div>
       </div>
       <div className={styles.item}>

@@ -1,5 +1,5 @@
 import dbConnect from "../../../util/mongo";
-import Product from "../../../models/Product";
+import Order from "../../../models/Order";
 
 const handler = async (req, res) => {
   const { method } = req;
@@ -14,7 +14,6 @@ const handler = async (req, res) => {
       res.status(500).json(err);
     }
   }
-
   if (method === "POST") {
     try {
       const order = await Order.create(req.body);

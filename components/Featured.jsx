@@ -4,7 +4,7 @@ import styles from "../styles/Featured.module.css";
 
 const Featured = () => {
   const [index, setIndex] = useState(0);
-  const images = ["/img/helmet.png", "/img/horn.png", "/img/led.png"];
+  const images = ["/img/banner1.jpg", "/img/banner3.jpg", "/img/banner4.jpg"];
 
   const handleArrow = (direction) => {
     if (direction === "l") {

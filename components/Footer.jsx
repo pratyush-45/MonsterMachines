@@ -1,5 +1,8 @@
 import Image from "next/legacy/image";
 import styles from "../styles/Footer.module.css";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { FiMail } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -11,19 +14,48 @@ const Footer = () => {
         <div className={styles.card}>
           <h1 className={styles.title}>CONNECT WITH US</h1>
           <p className={styles.text}>
-            Location
+            <FaLocationDot className={styles.icons} />{" "}
+            <a
+              href="https://maps.app.goo.gl/niM5qcSPpctiQApv6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Location
+            </a>
             <br />
-            Mail
-            <br /> Facebook
-            <br /> Instagram
+            <FaInstagram className={styles.icons} />{" "}
+            <a
+              href="https://www.instagram.com/monstermachine77/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+            <br />
+            <FaYoutube className={styles.icons} />
+            <a
+              href="https://www.youtube.com/@monstermachine8164"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              Youtube
+            </a>
+            <br />
+            <FiMail className={styles.icons} />{" "}
+            <a href="mailto:surajvishwakarma78050@gmail.com">Mail</a>
           </p>
         </div>
         <div className={styles.card}>
           <h1 className={styles.title}>FIND OUR STORE</h1>
           <p className={styles.text}>
-            221B, Baker Street.
-            <br /> London, 85022
-            <br /> (123) 456-7890
+            Guru Ghasidas Chowk,
+            <br /> Budhwari Bypass road,
+            <br />
+            TP Nagar.
+            <br />
+            Korba, Chhattisgarh
+            <br /> 7805078344
           </p>
         </div>
         <div className={styles.card}>
